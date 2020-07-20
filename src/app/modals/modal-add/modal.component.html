@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div class="title-bar">
+    Add new asset
+  </div>
+  <form [formGroup]="newAssetForm">
+    <div class="form-wrap form-group">
+      <label for="name">Name</label>
+      <input id="name" type="text" formControlName="name" class="form-control" matInput placeholder="Name">
+    </div>
+    <div class="form-wrap form-group">
+      <label for="latitude">Latitude</label>
+      <input id="latitude" type="number" formControlName="latitude" class="form-control" matInput placeholder="Latitude">
+    </div>
+    <div class="form-wrap form-group">
+      <label for="longitude">Longitude</label>
+      <input id="longitude" type="number" formControlName="longitude" class="form-control" matInput placeholder="Longitude">
+    </div>
+    <div class="form-group form-wrap form-button">
+      <button class="btn btn-primary" matDialogClose>Cancel</button>
+      <button class="btn btn-primary" (click)="addLocation()" [disabled]="newAssetForm.invalid">Add</button>
+    </div>
+  </form>
+</div>

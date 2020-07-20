@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+@import "~bootstrap/scss/bootstrap";
+@import "~leaflet/dist/leaflet.css";
+
+
+
+
+
+
+* {
+  outline: none;
+  box-shadow: none;
+  &:focus,&:hover{
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+button{
+  &:focus,&:hover{
+    outline: none;
+    box-shadow: none !important;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.row-30 {
+  margin-bottom: -30px;
+}
+
+.row-30:empty {
+  margin-bottom: 0;
+}
+
+.row-30 > * {
+  margin-bottom: 30px;
+}
+
+.section-lg{
+  padding: 100px 0;
+}
+
+img{
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.bg-default:not([style*="background-"]) + .bg-default:not([style*="background-"]) {
+  padding-top: 0;
+}
+
+.section-sm{
+  padding: 50px 0;
+}
+
+a{
+  color: inherit;
+  &:hover{
+    color: inherit;
+  }
+}
+
+*:hover,*:focus,*:active{
+  outline: none;
+}
+
+input:active,
+input:focus,
+input:hover{
+  box-shadow: none;
+}
+
+p{
+  margin-bottom: 0;
+}
+
+ul,ol{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  transition: all ease .25s;
+  &:hover{
+    transition: all ease .25s;
+  }
+}
+
+li{
+  list-style: none;
+}
+

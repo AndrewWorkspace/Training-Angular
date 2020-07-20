@@ -1,0 +1,34 @@
+<section class="section-md">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2>Asset Map</h2>
+        <div class="wrapper">
+          <span class="title-bar">Map</span>
+          <div class="map">
+            <app-map></app-map>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="action-wrapper">
+          <input type="text" class="search" placeholder="Search Asset" [(ngModel)]="searchItem">
+          <button mat-button class="button btn btn-primary" (click)="openDialog()">
+            Add Asset
+          </button>
+        </div>
+        <div class="wrapper">
+          <div class="title-bar">
+            Assets
+          </div>
+          <ul  class="locations-list" >
+            <li *ngFor = "let items of currentLang | searchPipe:searchItem; let index = index;">
+              {{items.name}}
+              <span class="remove" (click)="OpenConfirm(index)"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
